@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+{% block content%}
+<div class="container text-center mt-5">
+        {% if result %}
+        <div class="heading text-danger">
+            <h1 class="display-4">Your are detected Covid positive. Your data has been sent to the hospital. They will contact you soon.</h1>
+        </div>
+        {% else %}
+        <div class="heading text-success">
+                <h1 class="display-4">You are Covid negative.</h1>
+            </div>
+        {% endif %}
+        <div class="mt-4 display-6">
+            <p>If you want to check again then click.</p>
+        </div>
+        <div class="mt-4">
+            <a href="{{url_for('checking')}}" class="btn btn-primary btn-lg">Check Again</a>
+        </div>
+        <footer class="mt-5">
+            <p class="text-muted">Made By Abhisheak Mishra, Anuj Kumar Kushwaha, and Prabhat Mogha</p>
+        </footer>
+    </div>
+{%endblock%}

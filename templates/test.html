@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{%from 'bootstrap5/form.html' import render_form%}
+{% block title %}Testing{% endblock %}
+{% block content%}
+<div class="container d-flex flex-column">
+    <div class="content d-flex flex-column align-items-center my-4">
+        <div class="heading text-center">
+            <h1 class="display-4">Covid 19 Detection Using X-Ray Image</h1>
+        </div>
+        <div class="w-50 p-3">
+            {{ render_form(form) }}
+        </div>
+    </div>
+    <footer class="text-center mt-auto">
+        <p>Made By Abhisheak Mishra, Anuj Kumar Kushwaha and Prabhat Mogha</p>
+    </footer>
+</div>
+{% endblock %}
